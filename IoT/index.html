@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IoT</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="icon" type="image/png" href="iot.ico" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Formulario Crear Espacios -->
+            <form id="formulario" class="mb-3 mt-4">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Agregar Espacio" id="espacio" required />
+                    <label for="espacio">Agregar Espacio</label>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Añadir</button>
+            </form>
+            <!-- Lista de Espacios -->
+            <div id="espacios" class="row"></div>
+            <div id="datosEspacio" class="mt-4">
+                <!-- Formularios de crear Sensor y ejecutor -->
+                <h3>Crear Dispositivos</h3>
+                <div class="mb-3 form-floating col-3">
+                    <select id="tipo" name="tipo" class="form-select" required>
+                        <option value="" selected></option>
+                        <option value="sensor">Sensor</option>
+                        <option value="ejecutor">Ejecutor</option>
+                    </select>
+                    <label for="tipo">Tipo</label>
+                </div>
+                <!-- Formulario Sensor/Ejecutor -->
+                <form id="formularioAdd" class="mb-3">
+                    <div class="mb-2 col-3 form-floating">
+                        <input type="text" id="nombre" class="form-control" required />
+                        <label for="nombre">Nombre/Numero</label>
+                    </div>
+                    <div class="mb-2 col-3 form-floating">
+                        <select name="valor" id="valor" class="form-select" required></select>
+                        <label for="valor">Valor</label>
+                    </div>
+                    <button type="submit" class="btn btn-success">Añadir</button>
+                </form>
+                <!-- Textos -->
+                <h1 id="textoNombreEspacio"></h1>
+                <!-- TExto de no hay ejecutores/sensores -->
+                <h1><span class="badge rounded-pill text-bg-danger" id="infoEspacio"></span></h1>
+                <!-- Lista de Ejecutores/Sensores -->
+                <div id="elementosEspacio" class="row"></div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./js/index.js" type="module"></script>
+    </body>
+</html>

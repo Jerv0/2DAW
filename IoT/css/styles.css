@@ -1,0 +1,47 @@
+body {
+    background-color: #10454F; 
+}
+/* 
+#10454F 
+#506266
+#818274
+#A3AB78
+#BDE038
+*/
+.div {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 550px;
+    background-color: #A3AB78;
+}
+.container {
+    /* Estilos para el contenido principal */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color:black; /* Color del texto */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #cafd0f; /* Color del texto de encabezado */
+}
+
+
+.btn {
+    background-color: #818274; /* Color de fondo del botón */
+    color: #BDE038; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #818274; /* Color de fondo del botón al pasar el mouse */
+}
